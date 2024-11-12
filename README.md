@@ -1,2 +1,2 @@
-# crud-clientes-api
-O serviço é responsável por todas as operações relacionadas a clientes.
+# gestao-pedidos-api
+O serviço faz o processamento de todos os pedidos, desde a criação até a conclusão.

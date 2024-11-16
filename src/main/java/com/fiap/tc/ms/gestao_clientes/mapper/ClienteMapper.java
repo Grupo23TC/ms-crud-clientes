@@ -14,14 +14,12 @@ public class ClienteMapper {
                 cliente.getIdade(),
                 cliente.getCpf(),
                 cliente.getEmail(),
-                cliente.getEndereco(),
-                cliente.getCep()
+                cliente.getEndereco()
         );
     }
 
     public static Cliente toCliente(CadastrarClienteRequest request) {
         Cliente cliente = new Cliente();
-        cliente.setClienteId(request.usuarioId());
         cliente.setNome(request.nome());
         cliente.setIdade(request.idade());
         cliente.setCpf(request.cpf());

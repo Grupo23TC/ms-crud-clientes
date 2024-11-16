@@ -6,6 +6,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ms-gestao-pedidos
+    container_name: ms-crud-clientes
     ports:
       - "8081:8080"

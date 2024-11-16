@@ -7,12 +7,7 @@ public record ClienteResponse(
         int idade,
         String cpf,
         String email,
-        String endereco,
-        String cep) {
+        String endereco){
 
-
-    public Long getUsuarioId() {
-        return usuarioId;
-    }
 
 }

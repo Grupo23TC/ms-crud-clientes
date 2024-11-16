@@ -20,7 +20,5 @@ public interface ClienteService {
     ClienteDeletadoResponse excluirCliente(Long id);
 
     ClienteResponse atualizarCliente(Long id, AtualizarClienteRequest clienteAtualizado);
-
-    @Transactional(readOnly = true)
-    List<ClienteResponse> buscarClientesPorCep(String cep);
+    
 }

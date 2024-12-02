@@ -4,9 +4,11 @@ import jakarta.validation.constraints.Positive;
 
 public record CadastrarClienteRequest(
         String nome,
-        int idade,
+        String email,
         String cpf,
+        int idade,
         String endereco,
         String cep
 ) {
+
 }

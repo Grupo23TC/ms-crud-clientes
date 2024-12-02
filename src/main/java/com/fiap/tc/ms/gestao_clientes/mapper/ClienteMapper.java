@@ -8,21 +8,26 @@ public class ClienteMapper {
 
 
     public static ClienteResponse toClienteResponse(Cliente cliente) {
+        if (cliente == null) {
+            throw new IllegalArgumentException("O cliente não pode ser nulo");
+        }
         return new ClienteResponse(
                 cliente.getClienteId(),
                 cliente.getNome(),
                 cliente.getIdade(),
                 cliente.getCpf(),
                 cliente.getEmail(),
-                cliente.getEndereco()
+                cliente.getEndereco(),
+                cliente.getCep()
         );
     }
 
     public static Cliente toCliente(CadastrarClienteRequest request) {
-        Cliente cliente = new Cliente();
+        Cliente cliente = new Cliente(1L, "Lucas", "lucas@gmail.com", "03335923014", 14, "Quintino Bocaiuva", "99701520");
         cliente.setNome(request.nome());
-        cliente.setIdade(request.idade());
+        cliente.setEmail(request.email());
         cliente.setCpf(request.cpf());
+        cliente.setIdade(request.idade());
         cliente.setEndereco(request.endereco());
         cliente.setCep(request.cep());
 

@@ -36,7 +36,7 @@ public class ClienteController {
     URI uri = ServletUriComponentsBuilder
             .fromCurrentRequest()
             .path("/{id}")
-            .buildAndExpand(clienteSalvo.usuarioId())
+            .buildAndExpand(clienteSalvo.clienteId())
             .toUri();
 
     return ResponseEntity.created(uri).body(clienteSalvo);

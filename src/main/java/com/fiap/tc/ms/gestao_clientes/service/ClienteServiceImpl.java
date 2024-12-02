@@ -24,9 +24,14 @@ public class ClienteServiceImpl implements ClienteService {
 
   @Transactional(readOnly = true)
   public Page<ClienteResponse> listarClientes(Pageable pageable) {
-    return clienteRepository.findAll(pageable).map(ClienteMapper::toClienteResponse);
+    return clienteRepository.findAll(pageable)
+            .map(cliente -> {
+              if (cliente == null) {
+                throw new IllegalStateException("Cliente nulo retornado do repositório");
+              }
+              return ClienteMapper.toClienteResponse(cliente);
+            });
   }
-
 
   @Transactional(readOnly = true)
   public ClienteResponse buscarClientePorId(Long id) {

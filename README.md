@@ -25,7 +25,7 @@ Este projeto apresenta o desenvolvimento de um novo sistema de Crud Clientes, co
 
 `Funcionalidade 3:` Deletar Clientes
 
-`Funcionalidade 4:` Atualizar CLientes
+`Funcionalidade 4:` Atualizar Clientes
 
 
 
@@ -54,9 +54,17 @@ Você pode [acessar o código fonte do projeto](https://github.com/Grupo23TC/res
 
 ## Abrir e rodar o projeto
 
-Após baixar o projeto, você pode abrir com o `Intellij ou IDE de preferência para projetos Java`.
+Antes de iniciar o projeto, devemos ter a seguinte rede no docker:
+PS: caso você já tenha criado, não precisa criá-la novamente.
 
-Para executar o projeto localmente, deve estar usando a versão do JDK 17 ou superior e possuir o Maven em uma versão compatível configurado na sua máquina. Por se tratar de uma aplicação Spring Boot, o próprio Spring se encarregará de buildar e startar a aplicação em um servidor local Tomcat na porta 8080.
+docker network create shared_network
+
+Para rodar o projeto localmente precisamos do  Docker Hub instalado.
+Rode o comando:
+bash
+docker-compose up
+
+Confira em seu Docker Desktop a subida do container e suas respectivas aplicações e bancos de dados isolados.
 
 Para você acessar o Swagger, basta, enquanto o projeto estiver em execução, acessar o link: http://localhost:8080/swagger-ui/index.html
 

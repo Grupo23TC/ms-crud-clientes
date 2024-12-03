@@ -58,6 +58,24 @@ public class ClienteServiceImpl implements ClienteService {
     Cliente cliente = clienteRepository.findById(id)
             .orElseThrow(() -> new ClienteNotFoundException("Cliente com id: " + id + " não encontrado"));
 
+    if (clienteAtualizado.nome() != null) {
+      cliente.setNome(clienteAtualizado.nome());
+    }
+    if (clienteAtualizado.endereco() != null) {
+      cliente.setEndereco(clienteAtualizado.endereco());
+    }
+    if (clienteAtualizado.cpf() != null) {
+      cliente.setCpf(clienteAtualizado.cpf());
+    }
+    if (clienteAtualizado.cep() != null) {
+      cliente.setCep(clienteAtualizado.cep());
+    }
+    if (clienteAtualizado.idade() > 0) {
+      cliente.setIdade(clienteAtualizado.idade());
+    }
+    if (clienteAtualizado.email() != null) {
+      cliente.setEmail(clienteAtualizado.email());
+    }
 
     Cliente clienteSalvo = clienteRepository.save(cliente);
 

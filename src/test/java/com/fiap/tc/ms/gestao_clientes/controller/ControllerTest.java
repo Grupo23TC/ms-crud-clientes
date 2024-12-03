@@ -109,7 +109,7 @@ public class ControllerTest {
     @Test
     void deveAtualizarCliente() throws Exception {
         ClienteResponse clienteResponse = new ClienteResponse(1L, "Lucas", 26 , "03335923014", "lucas@email.com", "Rua B", "99701520");
-        AtualizarClienteRequest atualizarClienteRequest = new AtualizarClienteRequest("Lucas", 13, "033356923014", "Qintino Bocaiuva","99701520");
+        AtualizarClienteRequest atualizarClienteRequest = new AtualizarClienteRequest("Lucas", 13, "033356923014", "Qintino Bocaiuva","99701520", "lucasct1996@gmail.com");
 
         Mockito.when(clienteService.atualizarCliente(Mockito.anyLong(), Mockito.any(AtualizarClienteRequest.class)))
                 .thenReturn(clienteResponse);

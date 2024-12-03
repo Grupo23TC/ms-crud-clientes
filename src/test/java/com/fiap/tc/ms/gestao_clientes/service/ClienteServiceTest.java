@@ -108,7 +108,7 @@ public class ClienteServiceTest {
 
     @Test
     void deveAtualizarCliente() {
-        AtualizarClienteRequest atualizarClienteRequest = new AtualizarClienteRequest("Lucas", 13, "033356923014", "Rua B", "99701520");
+        AtualizarClienteRequest atualizarClienteRequest = new AtualizarClienteRequest("Lucas", 13, "033356923014", "Rua B", "99701520", "lucasct1996@gmail.com");
         Cliente clienteExistente = new Cliente(1L, "Lucas", "lucas@gmail.com", "03335923014", 14, "Quintino Bocaiuva", "99701520");
 
         Mockito.when(clienteRepository.findById(anyLong())).thenReturn(java.util.Optional.of(clienteExistente));

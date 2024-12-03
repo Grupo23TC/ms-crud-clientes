@@ -40,7 +40,7 @@ public class ClienteHelper {
     String cpf = "03335923055";
     String email = "lucasPaulo@mail.com";
     String endereco = "Quintino endereco";
-    return new AtualizarClienteRequest(nome, idade, cpf, email, endereco);
+    return new AtualizarClienteRequest(nome, idade, cpf, email, endereco, email);
   }
 
 

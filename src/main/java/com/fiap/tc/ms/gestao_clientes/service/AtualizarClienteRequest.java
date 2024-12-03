@@ -5,5 +5,6 @@ public record AtualizarClienteRequest(
         int idade,
         String cpf,
         String endereco,
-        String cep
+        String cep,
+        String email
 ) {}

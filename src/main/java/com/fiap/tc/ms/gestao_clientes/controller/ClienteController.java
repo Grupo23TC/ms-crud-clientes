@@ -31,7 +31,7 @@ public class ClienteController {
   }
 
   @PostMapping
-  public ResponseEntity<ClienteResponse> salvarCliente(@Valid @RequestBody CadastrarClienteRequest cliente) {
+  public ResponseEntity<ClienteResponse> salvarCliente(@RequestBody CadastrarClienteRequest cliente) {
     ClienteResponse clienteSalvo = clienteService.cadastrarCliente(cliente);
     URI uri = ServletUriComponentsBuilder
             .fromCurrentRequest()
@@ -50,7 +50,7 @@ public class ClienteController {
   @PutMapping("/{id}")
   public ResponseEntity<ClienteResponse> atualizarCliente(
           @PathVariable Long id,
-          @Valid @RequestBody AtualizarClienteRequest clienteAtualizado
+          @RequestBody AtualizarClienteRequest clienteAtualizado
   ) {
     return ResponseEntity.ok(clienteService.atualizarCliente(id, clienteAtualizado));
   }

@@ -23,7 +23,7 @@ public class ClienteMapper {
     }
 
     public static Cliente toCliente(CadastrarClienteRequest request) {
-        Cliente cliente = new Cliente(1L, "Lucas", "lucas@gmail.com", "03335923014", 14, "Quintino Bocaiuva", "99701520");
+        Cliente cliente = new Cliente();
         cliente.setNome(request.nome());
         cliente.setEmail(request.email());
         cliente.setCpf(request.cpf());
